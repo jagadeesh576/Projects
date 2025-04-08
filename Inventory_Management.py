@@ -8,7 +8,7 @@ m_no=[]
 s_cart=[]
 i_qnt=[]
 i_profit=[]
-password='Jaga1873'
+password='abc1234'
 profit=0
 while True:
     print('Choose one Option')
