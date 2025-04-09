@@ -255,15 +255,6 @@ while True:
                 print('Vegatable','Quantity')
                 for a,b in zip(cart,weight):
                     print(a,b,'Kgs')
-                    '''
-                    print('-'*18)
-                    max_len_a = max(len(str(a)) for a in cart + ['Vegetable'])
-                    max_len_b = max(len(f"{b} Kgs") for b in weight + ['Quantity'])
-                    for a,b in zip(cart,weight):
-                        print(
-                            a.ljust(max_len_a),
-                            f"{b} Kgs".ljust(max_len_b)
-                            ) '''
                 print('*'*18)
             # Billing
             elif action==5:
