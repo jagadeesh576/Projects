@@ -41,30 +41,30 @@ while True:
                             if veggie.isalpha():
                                 veg.append(veggie)
                             else:
-                                print('Please enter a valid vegetable name')
-                        print(veggie,'is added to Inventory')
+                                print('Please enter a valid vegetable name.')
+                        print(veggie,'is added to Inventory.')
                         while True:
                             qnty=float(input('Please specify the quantity for the new vegetable (in kilograms): '))
                             if qnty>0:
                                 quantity.append(qnty)
                                 break
                             else:
-                                print('Please enter valid quantity')
-                        print(qnty,'Kgs quantity of',veggie,'is added to Quantity data')
+                                print('Please enter valid quantity.')
+                        print(qnty,'Kgs quantity of',veggie,'is added to Quantity data.')
                         while True:
                             cost=int(input('Enter cost price of new vegetable: '))
                             if cost>0:
                                 cost_price.append(cost)
                             else:
-                                print('Please enter a valid cost price')
-                        print(cost,'cost price of',veggie,'is added to Cost_Price data')
+                                print('Please enter a valid cost price.')
+                        print(cost,'cost price of',veggie,'is added to Cost_Price data.')
                         while True:
                             sell=int(input('Enter selling price of new vegetable: '))
                             if sell>0:
                                 sell_price.append(sell)
                             else:
-                                print('Please enter valid selling price')
-                        print(sell,'selling price of',veggie,'is added to Selling_price data')
+                                print('Please enter valid selling price.')
+                        print(sell,'selling price of',veggie,'is added to Selling_price data.')
                 # Removing vegetables
                 elif op==2:
                     while True:
@@ -72,16 +72,16 @@ while True:
                         if veggie.isalpha():
                             break
                         else:
-                            print('Please enter a valid vegetable name')
+                            print('Please enter a valid vegetable name.')
                     if veggie in veg: 
                         idx=veg.index(veggie)
                         veg.pop(idx)
                         quantity.pop(idx)
                         cost_price.pop(idx)
                         sell_price.pop(idx)
-                        print(veggie,'and all the data of',veggie,'is removed from Inventory')
+                        print(veggie,'and all the data of',veggie,'is removed from Inventory.')
                     else:
-                        print(veggie,'is not available')
+                        print(veggie,'is not available.')
                         
                 # Updating vegetables
                 elif op==3:
@@ -90,7 +90,7 @@ while True:
                         if veggie.isalpha():
                                 break
                         else:
-                            print('Please enter a valid vegtable name')
+                            print('Please enter a valid vegtable name.')
                     if veggie in veg:
                         idx=veg.index(veggie)
                         v=input('Enter new vegetable name you want to add: ')
@@ -100,28 +100,28 @@ while True:
                             if qnty>0:
                                 quantity[idx]=quantity[idx]+qnty
                             else:
-                                print('please eanter a valid quantity')
-                        print(qnty,'Kgs of',veggie,'is modified in Quantity data')
+                                print('please eanter a valid quantity.')
+                        print(qnty,'Kgs of',veggie,'is modified in Quantity data.')
                         while True:
                             cost=float(input('Enter cost price: '))
                             if cost>0:
                                 cost_price[idx]=cost
                             else:
-                                print('Please enter a valid cost price')
-                        print(cost,'cost price of',veggie,'is added to Cost_Price data')
+                                print('Please enter a valid cost price.')
+                        print(cost,'cost price of',veggie,'is added to Cost_Price data.')
                         while True:
                             sell=float(input('Enter the selling price: '))
                             if sell>0:
                                 sell_price[idx]=sell
                             else:
-                                print('Please enter a valid selling price')
-                        print(sell,'selling price of',veggie,'is added to Selling_price data')
+                                print('Please enter a valid selling price.')
+                        print(sell,'selling price of',veggie,'is added to Selling_price data.')
                     else:
-                        print(veggie,'is not available')
+                        print(veggie,'is not available.')
                 else:
                     print(op,'?')
-                    print('Sorry, there is no such operation')
-                    print('Please choose a valid operation')
+                    print('Sorry, there is no such operation.')
+                    print('Please choose a valid operation.')
             # View Inventory
             elif action==2:
                 print('*'*4,'IVENTORY DETAILS','*'*4)
@@ -158,10 +158,10 @@ while True:
                 break
             else:
                 print(action,'?')
-                print('Sorry, there is no such operation')
-                print('Please, choose a valid option')
+                print('Sorry, there is no such operation.')
+                print('Please, choose a valid option.')
         else:
-            print('Incorrect Password')
+            print('Incorrect Password.')
     # Customer (Buying vegetables)
     elif ask==2:
         print('*'*4,'Vegetables available in Inventory','*'*4)
@@ -192,23 +192,23 @@ while True:
                                 if qnty>0: #10>0 and 10.isdidgit() - T and T - T
                                     break
                                 else:
-                                    print('Please eneter a valid quantity')
+                                    print('Please eneter a valid quantity.')
                                     # Extracting the index of vegetable
                             idx=veg.index(veggie) #veg.index(Tomato)
                             if qnty<=(quantity[idx]): #1<=15 - T
                                 if veggie in cart:
                                     cidx=cart.index(veggie)
                                     weight[cidx]=weight[cidx]+qnty
-                                    print(veggie,'is added to cart')
+                                    print(veggie,'is added to cart.')
                                 else:
                                     cart.append(veggie)
                                     weight.append(qnty)
                             else:
-                                print('Insufficient stock')
+                                print('Insufficient stock.')
                         else:
-                            print(veggie,'is not available')
+                            print(veggie,'is not available.')
                     else:
-                        print('Please enter a valid vegetable name')
+                        print('Please enter a valid vegetable name.')
                     ch=input('Do you want to purchase more? (yes/no): ')
                     if ch=='no':
                         break
@@ -219,16 +219,16 @@ while True:
                     if veggie.isalpha():
                         break
                     else:
-                        print('Please enter a valid vegetable name')
+                        print('Please enter a valid vegetable name.')
                 if veggie in cart:
                     idx=cart.index(veggie)
                     cart.pop(idx)
                     weight_removed=weight.pop(idx)
                     item_idx=veg.index(veggie)
                     quantity[item_idx]=quantity[item_idx]+weight_removed
-                    print(veggie,'and all the data of',veggie,'is removed from cart')
+                    print(veggie,'and all the data of',veggie,'is removed from cart.')
                 else:
-                    print(veggie,'is not available in cart')
+                    print(veggie,'is not available in cart.')
             #Modify the cart
             elif action==3:
                 while True:
@@ -236,7 +236,7 @@ while True:
                     if veggie.isalpha():
                         break
                     else:
-                        print('Please enter a valid vegetable name')
+                        print('Please enter a valid vegetable name.')
                 if veggie in cart:
                     idx=cart.index(veggie)
                     while True:
@@ -245,8 +245,8 @@ while True:
                             weight[idx]=qnty
                             break
                         else:
-                            print('Please enter a valid quantity')
-                    print(veggie,'is modified')
+                            print('Please enter a valid quantity.')
+                    print(veggie,'is modified.')
                 else:
                     print(veggie,'is not available in cart')
             # View Cart
@@ -329,9 +329,9 @@ while True:
                 break
             else:
                 print(action,'?')
-                print('Sorry, there is no such option')
-                print('Please choose the correct option')
+                print('Sorry, there is no such option.')
+                print('Please choose the correct option.')
     else:
         print(ask,'?',sep='')
-        print('Sorry, there is no such option')
-        print('Please choose the correct option')
+        print('Sorry, there is no such option.')
+        print('Please choose the correct option.')
