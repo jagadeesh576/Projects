@@ -8,7 +8,7 @@ m_no=[]
 s_cart=[]
 i_qnt=[]
 i_profit=[]
-password='abc1234'
+password='Jaga1873'
 profit=0
 while True:
     print('Choose one Option')
@@ -287,7 +287,7 @@ while True:
                 # Displaying vegtables bought by a person
                 print('*'*4,'VEGETABLES IN BAG','*'*4)
                 # Displaying vegetables and it's quantity after closing the bill
-                # Adding them to view report
+                # Adding them to report
                 for a,b in zip(cart,weight):
                         if a in s_cart:
                             didx=s_cart.index(a)
