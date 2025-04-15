@@ -1,6 +1,6 @@
 # Calender
-# date+moncode+last_two_digits+century_code+number_of_leapyears (if leap year and date after feb 29 include year else (year-1))
-'''m_code={'01':1,'02':4,'03':4,'04':0,'05':2,'06':5,'07':0,'08':3,'09':6,'10':1,'11':4,'12':6}
+# date+monthcode+last_two_digits+century_code+number_of_leapyears (if leap year and date after feb 29 include year else (year-1))
+m_code={'01':1,'02':4,'03':4,'04':0,'05':2,'06':5,'07':0,'08':3,'09':6,'10':1,'11':4,'12':6}
 week_code={1:'Sunday',2:'Monday',3:'Tuesday',4:'Wednesday',5:'Thursday',6:'Friday',0:'Saturday'}
 x=input('Enter the date to find the day (dd/mm/yyyy): ')
 date=int(x[:2])
@@ -39,4 +39,4 @@ def main():
         print(week_code[avg])
     else:
         print('Invalid date, Please enter a valid date')
-main() '''
+main()
