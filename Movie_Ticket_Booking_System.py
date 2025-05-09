@@ -1,6 +1,6 @@
 import copy
-username='Jagadeesh'
-password='Jaga@1873'
+username='User'
+password='1234'
 Movies=['SVSC','MUFASA','ORANGE']
 Price=[200,150,200]
 Show_time={'11:00 AM':'SVSC','2:30 PM':'MUFASA','6:00 PM':'ORANGE','9:00 PM':'SVSC'}
